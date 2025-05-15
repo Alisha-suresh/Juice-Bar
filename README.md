@@ -60,17 +60,6 @@ A modern, responsive landing page for a fresh juice bar, built with **React.js**
 - **CSV Export** – For newsletter email capture and management  
 - **Google Maps API** – For location embedding (optional)
 
----
-
-## 📋 Prerequisites
-
-Before starting, ensure you have the following installed:
-
-- [Node.js](https://nodejs.org/) (v14.0.0 or later)  
-- [npm](https://www.npmjs.com/) (v6.0.0 or later)
-
----
-
 ## 🚀 Installation & Setup
 
 Follow these steps to run the project locally:
