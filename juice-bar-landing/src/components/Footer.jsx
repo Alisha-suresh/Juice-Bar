@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
     return (
@@ -25,7 +26,7 @@ export default function Footer() {
                 <nav className="flex space-x-8 font-semibold text-sm">
                     <a href="/privacy-policy" className="hover:text-lemon transition">Privacy Policy</a>
                     <a href="/terms" className="hover:text-lemon transition">Terms</a>
-                    <a href="/contact" className="hover:text-lemon transition">Contact</a>
+                    <Link to="/contact" className="hover:text-lemon transition">Contact</Link>
                 </nav>
             </div>
 

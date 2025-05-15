@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from 'react';
+import { Button } from './ButtonComponent';
 
 const slides = [
     {
         id: 1,
-        image: '/images/juice1.jpg',
+        image: '/assets/1.png',
         headline: 'FRESH NATURAL JUICE',
         subheadline: 'cold-pressed daily for you',
         description: '100% organic ingredients, packed with nutrients and flavor. No added sugar, no preservatives — just pure goodness.',
     },
     {
         id: 2,
-        image: '/images/juice2.jpg',
+        image: '/assets/2.png',
         headline: 'PURE, COLD-PRESSED GOODNESS',
         subheadline: 'Refreshing flavors every day',
         description: 'Made with fresh fruits and veggies to energize your day.',
     },
     {
         id: 3,
-        image: '/images/juice3.jpg',
+        image: '/assets/3.png',
         headline: 'NATURAL JUICES DELIVERED',
         subheadline: 'Straight from farm to your door',
         description: 'Experience the freshness of cold-pressed juices with every sip.',
@@ -118,18 +119,13 @@ const Hero = () => {
                     </p>
 
                     <div className="flex justify-center md:justify-start flex-wrap gap-4">
-                        <a
-                            href="#menu"
-                            className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-full transition-all hover:shadow-lg transform hover:-translate-y-1"
-                        >
+                        {/* using Button component */}
+                        <Button href="#menu" variant="primary" size="md">
                             See Menu
-                        </a>
-                        <a
-                            href="#contact"
-                            className="bg-black hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-full transition-all hover:shadow-lg transform hover:-translate-y-1"
-                        >
+                        </Button>
+                        <Button href="#contact" variant="secondary" size="md">
                             Order Now
-                        </a>
+                        </Button>
                     </div>
 
                     <div className="flex justify-center md:justify-start gap-3 mt-8">

@@ -8,7 +8,7 @@ const ReviewsSection = () => {
         {
             id: 1,
             name: "Jessica L.",
-            avatar: "/api/placeholder/64/64",
+            avatar: "/assets/female_1.png",
             rating: 5,
             date: "April 12, 2025",
             review: "The Green Detox completely changed my morning routine! I've tried many juice cleanses, but this one actually tastes amazing while giving me so much energy.",
@@ -17,7 +17,7 @@ const ReviewsSection = () => {
         {
             id: 2,
             name: "Michael T.",
-            avatar: "/api/placeholder/64/64",
+            avatar: "/assets/male_1.png",
             rating: 5,
             date: "March 30, 2025",
             review: "Tropical Sunrise is like vacation in a bottle. The freshness is unmatched, and I love how they don't add any artificial sweeteners. My kids love it too!",
@@ -26,7 +26,7 @@ const ReviewsSection = () => {
         {
             id: 3,
             name: "Aisha K.",
-            avatar: "/api/placeholder/64/64",
+            avatar: "/assets/female_2.png",
             rating: 4,
             date: "May 2, 2025",
             review: "I order weekly through their subscription service, and it's so convenient. The Berry Blast is my favorite - packed with antioxidants and tastes like summer.",
@@ -35,7 +35,7 @@ const ReviewsSection = () => {
         {
             id: 4,
             name: "David R.",
-            avatar: "/api/placeholder/64/64",
+            avatar: "/assets/male_2.png",
             rating: 5,
             date: "April 25, 2025",
             review: "The Carrot Ginger juice helped me through my cold last month. I can literally taste how nutrient-dense these juices are. Worth every penny!",
@@ -72,7 +72,6 @@ const ReviewsSection = () => {
         // Resume auto-scrolling after 30 seconds of inactivity
         setTimeout(() => setIsAutoScrolling(true), 30000);
     };
-
     return (
         <section className="py-16 px-6 md:px-12 bg-cream-50 relative overflow-hidden">
             {/* Background decoration */}
