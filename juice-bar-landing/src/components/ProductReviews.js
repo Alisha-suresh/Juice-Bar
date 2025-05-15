@@ -72,8 +72,32 @@ const ReviewsSection = () => {
         // Resume auto-scrolling after 30 seconds of inactivity
         setTimeout(() => setIsAutoScrolling(true), 30000);
     };
+
+    // Smooth scrolling function for CTA button
+    const scrollToSection = (e, sectionId) => {
+        e.preventDefault();
+
+        const section = document.getElementById(sectionId);
+        if (section) {
+            // Get the navbar height for offset
+            const navbarHeight = document.querySelector('header').offsetHeight;
+
+            // Calculate position accounting for navbar height
+            const targetPosition = section.offsetTop - navbarHeight;
+
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+
+            // Update URL without full page reload
+            window.history.pushState(null, '', `#${sectionId}`);
+        }
+    };
+
     return (
-        <section className="py-16 px-6 md:px-12 bg-cream-50 relative overflow-hidden">
+        // Added id for smooth scrolling navigation
+        <section id="reviews" className="py-16 px-6 md:px-12 bg-cream-50 relative overflow-hidden scroll-mt-20">
             {/* Background decoration */}
             <div className="absolute -right-16 -top-16 w-64 h-64 rounded-full bg-yellow-100 opacity-30"></div>
             <div className="absolute -left-16 -bottom-16 w-96 h-96 rounded-full bg-yellow-100 opacity-30"></div>
@@ -198,7 +222,7 @@ const ReviewsSection = () => {
                     ))}
                 </div>
 
-                {/* CTA Section */}
+                {/* CTA Section with smooth scrolling */}
                 <div className="mt-16 text-center">
                     <h3 className="text-2xl font-bold mb-4">Ready to try our juices?</h3>
                     <p className="text-gray-600 mb-8 max-w-xl mx-auto">
@@ -206,6 +230,7 @@ const ReviewsSection = () => {
                     </p>
                     <a
                         href="#order"
+                        onClick={(e) => scrollToSection(e, 'contact')}
                         className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-full transition-all hover:shadow-lg transform hover:-translate-y-1 inline-flex items-center"
                     >
                         Order Now

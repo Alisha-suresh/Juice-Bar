@@ -1,5 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Button } from './ButtonComponent';
+import { Link as RouterLink } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
+import Header from './Navbar'; // Assuming you have a Navbar component
 
 const slides = [
     {
@@ -51,6 +54,8 @@ const Hero = () => {
 
     return (
         <>
+            <Header />
+
             <section className="relative pt-20 md:pt-0 h-screen flex flex-col justify-center overflow-hidden text-white">
                 {slides.map((slide, index) => (
                     <div
@@ -119,13 +124,27 @@ const Hero = () => {
                     </p>
 
                     <div className="flex justify-center md:justify-start flex-wrap gap-4">
-                        {/* using Button component */}
-                        <Button href="#menu" variant="primary" size="md">
+                        {/* Using react-scroll for hero buttons */}
+                        <ScrollLink
+                            to="menu"
+                            spy={true}
+                            smooth={true}
+                            offset={-80}
+                            duration={500}
+                            className="bg-yellow-400 text-black px-6 py-3 rounded-full font-medium hover:bg-yellow-500 transition-colors"
+                        >
                             See Menu
-                        </Button>
-                        <Button href="#contact" variant="secondary" size="md">
+                        </ScrollLink>
+                        <RouterLink
+                            to="order"
+                            spy={true}
+                            smooth={true}
+                            offset={-80}
+                            duration={500}
+                            className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full font-medium hover:bg-white hover:bg-opacity-10 transition-all"
+                        >
                             Order Now
-                        </Button>
+                        </RouterLink>
                     </div>
 
                     <div className="flex justify-center md:justify-start gap-3 mt-8">
@@ -142,8 +161,8 @@ const Hero = () => {
                 </div>
             </section>
 
-            {/* About Us Section */}
-            <section className="bg-yellow-50 text-gray-800 py-16 px-6 md:px-20 text-center md:text-left">
+            {/* About Us Section - ID for smooth scrolling */}
+            <section id="about-us" className="bg-yellow-50 text-gray-800 py-16 px-6 md:px-20 text-center md:text-left scroll-mt-20">
                 <div className="max-w-4xl mx-auto">
                     <h2 className="text-4xl font-extrabold mb-6">About Us</h2>
                     <p className="text-lg leading-relaxed max-w-3xl mx-auto md:mx-0">
@@ -153,6 +172,7 @@ const Hero = () => {
                     </p>
                 </div>
             </section>
+
         </>
     );
 };

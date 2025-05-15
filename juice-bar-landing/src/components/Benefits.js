@@ -1,5 +1,6 @@
 import { Button, CallToAction } from './ButtonComponent';
-
+import { Link } from 'react-scroll';
+import Header from './Navbar';
 const BenefitsSection = () => {
     const benefits = [
         {
@@ -46,7 +47,7 @@ const BenefitsSection = () => {
 
     return (
         <>
-            <section className="py-20 px-6 md:px-12 bg-white relative overflow-hidden">
+            <section id="benefits" className="py-20 px-6 md:px-12 bg-white relative overflow-hidden">
                 {/* Yellow splash background decorations */}
                 <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-100 rounded-full -mr-32 -mt-32 opacity-50"></div>
                 <div className="absolute bottom-0 left-0 w-96 h-96 bg-yellow-100 rounded-full -ml-48 -mb-48 opacity-40"></div>

@@ -114,7 +114,7 @@ const ProductsSection = () => {
 
     return (
         <>
-            <section className="py-16 px-6 md:px-12 bg-cream-50">
+            <section id="menu" className="py-16 px-6 md:px-12 bg-cream-50">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-12">
                         <span className="text-yellow-500 font-script text-2xl">Discover</span>
