@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
-import Navbar from './Navbar'; // Assuming you have a Navbar component
+import Navbar from './Navbar';
 
 const slides = [
     {

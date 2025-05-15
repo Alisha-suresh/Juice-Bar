@@ -79,10 +79,10 @@ const ReviewsSection = () => {
 
         const section = document.getElementById(sectionId);
         if (section) {
-            // Get the navbar height for offset
+
             const navbarHeight = document.querySelector('header').offsetHeight;
 
-            // Calculate position accounting for navbar height
+
             const targetPosition = section.offsetTop - navbarHeight;
 
             window.scrollTo({
@@ -90,7 +90,7 @@ const ReviewsSection = () => {
                 behavior: 'smooth'
             });
 
-            // Update URL without full page reload
+
             window.history.pushState(null, '', `#${sectionId}`);
         }
     };
@@ -98,7 +98,7 @@ const ReviewsSection = () => {
     return (
         // Added id for smooth scrolling navigation
         <section id="reviews" className="py-16 px-6 md:px-12 bg-cream-50 relative overflow-hidden scroll-mt-20">
-            {/* Background decoration */}
+
             <div className="absolute -right-16 -top-16 w-64 h-64 rounded-full bg-yellow-100 opacity-30"></div>
             <div className="absolute -left-16 -bottom-16 w-96 h-96 rounded-full bg-yellow-100 opacity-30"></div>
 
@@ -123,7 +123,7 @@ const ReviewsSection = () => {
                                 }}
                             >
                                 <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10 relative">
-                                    {/* Yellow splash in corner */}
+
                                     <div className="absolute -top-3 -right-3 w-16 h-16 z-0">
                                         <svg viewBox="0 0 100 100" className="w-full h-full">
                                             <path
@@ -133,7 +133,7 @@ const ReviewsSection = () => {
                                         </svg>
                                     </div>
 
-                                    {/* Large quote mark */}
+
                                     <div className="text-8xl text-yellow-200 font-serif absolute top-4 left-6 leading-none z-0">"</div>
 
                                     <div className="relative z-10">
