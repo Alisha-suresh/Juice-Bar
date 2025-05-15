@@ -102,7 +102,7 @@ const BenefitsSection = () => {
                                         </svg>
                                     </div>
                                     <img
-                                        src="/assets/bottle.jpeg"
+                                        src="/assets/bottle.png"
                                         alt="Juice Bottle"
                                         className="relative z-10 transform hover:rotate-2 transition-transform duration-300"
                                     />

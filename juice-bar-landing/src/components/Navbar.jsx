@@ -17,7 +17,8 @@ const Navigation = () => {
     return (
         <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
             <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
-                <a href="#" className="flex items-center text-2xl font-bold">
+                {/* Updated logo link to direct to home page */}
+                <a href="/" className="flex items-center text-2xl font-bold">
                     <span className="text-black">Fresh</span>
                     <span className="text-yellow-400">Squeeze</span>
                 </a>
