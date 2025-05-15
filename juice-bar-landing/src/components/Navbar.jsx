@@ -12,7 +12,7 @@ const Navigation = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const navItems = ['About', 'Menu', 'Benefits', 'Testimonials'];
+    const navItems = ['About', 'Menu', 'Benefits', 'Reviews'];
 
     return (
         <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>

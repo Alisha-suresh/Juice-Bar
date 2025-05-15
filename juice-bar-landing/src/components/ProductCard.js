@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from './ButtonComponent';
 
 const ProductCard = ({ product }) => {
     const { title, price, description, image, tags, rating } = product;
@@ -54,13 +55,18 @@ const ProductCard = ({ product }) => {
                     ))}
                 </div>
 
-                {/* Button */}
-                <button className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-full transition-all hover:shadow-md flex items-center justify-center gap-2">
+                {/* Button component */}
+                <Button
+                    variant="primary"
+                    className="w-full"
+                    icon={
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    }
+                >
                     Add to cart
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                </button>
+                </Button>
             </div>
         </div>
     );
@@ -74,7 +80,7 @@ const ProductsSection = () => {
             price: 7.99,
             rating: 5,
             description: "Kale, spinach, cucumber, apple, and lemon to cleanse and energize.",
-            image: "/api/placeholder/400/320",
+            image: "/assets/green_juice.png",
             tags: ["Detox", "Green", "Low Sugar"]
         },
         {
@@ -83,7 +89,7 @@ const ProductsSection = () => {
             price: 6.99,
             rating: 4,
             description: "Pineapple, mango, orange, and passion fruit for a vitamin boost.",
-            image: "/api/placeholder/400/320",
+            image: "/assets/sunshine.png",
             tags: ["Fruity", "Vitamin C"]
         },
         {
@@ -92,7 +98,7 @@ const ProductsSection = () => {
             price: 8.49,
             rating: 5,
             description: "Strawberry, blueberry, raspberry, and banana packed with antioxidants.",
-            image: "/api/placeholder/400/320",
+            image: "/assets/5.png",
             tags: ["Antioxidants", "Berries"]
         },
         {
@@ -101,43 +107,49 @@ const ProductsSection = () => {
             price: 7.49,
             rating: 4,
             description: "Fresh carrots, ginger, apple, and turmeric to boost immunity.",
-            image: "/api/placeholder/400/320",
+            image: "/assets/4.png",
             tags: ["Immunity", "Anti-inflammatory"]
         }
     ];
 
     return (
-        <section className="py-16 px-6 md:px-12 bg-cream-50">
-            <div className="max-w-6xl mx-auto">
-                <div className="text-center mb-12">
-                    <span className="text-yellow-500 font-script text-2xl">Discover</span>
-                    <h2 className="text-4xl font-extrabold mt-2 mb-4">Our Signature Juices</h2>
-                    <div className="w-24 h-1 bg-yellow-400 mx-auto"></div>
-                    <p className="mt-6 text-gray-600 max-w-2xl mx-auto">
-                        Handcrafted fresh daily using only the finest organic ingredients.
-                        Our cold-pressed process preserves nutrients for maximum health benefits.
-                    </p>
-                </div>
+        <>
+            <section className="py-16 px-6 md:px-12 bg-cream-50">
+                <div className="max-w-6xl mx-auto">
+                    <div className="text-center mb-12">
+                        <span className="text-yellow-500 font-script text-2xl">Discover</span>
+                        <h2 className="text-4xl font-extrabold mt-2 mb-4">Our Signature Juices</h2>
+                        <div className="w-24 h-1 bg-yellow-400 mx-auto"></div>
+                        <p className="mt-6 text-gray-600 max-w-2xl mx-auto">
+                            Handcrafted fresh daily using only the finest organic ingredients.
+                            Our cold-pressed process preserves nutrients for maximum health benefits.
+                        </p>
+                    </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {products.map((product) => (
-                        <ProductCard key={product.id} product={product} />
-                    ))}
-                </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {products.map((product) => (
+                            <ProductCard key={product.id} product={product} />
+                        ))}
+                    </div>
 
-                <div className="text-center mt-12">
-                    <a
-                        href="#all-products"
-                        className="inline-flex items-center justify-center bg-black text-white hover:bg-gray-800 font-bold py-3 px-8 rounded-full transition-all hover:shadow-lg"
-                    >
-                        View All Products
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                        </svg>
-                    </a>
+                    <div className="text-center mt-12">
+                        {/* Button component */}
+                        <Button
+                            href="#all-products"
+                            variant="secondary"
+                            icon={
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                                </svg>
+                            }
+                        >
+                            View All Products
+                        </Button>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+        </>
     );
 };
 
