@@ -229,7 +229,7 @@ const ReviewsSection = () => {
                         Join thousands of happy customers who have discovered the benefits of our fresh, cold-pressed juices.
                     </p>
                     <a
-                        href="#order"
+                        href="#cart"
                         onClick={(e) => scrollToSection(e, 'contact')}
                         className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-full transition-all hover:shadow-lg transform hover:-translate-y-1 inline-flex items-center"
                     >

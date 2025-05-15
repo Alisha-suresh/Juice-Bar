@@ -83,12 +83,13 @@ const Navbar = () => {
                             </span>
                         )}
                     </RouterLink>
-
+                    {/* Sign In Button */}
                     <RouterLink
-                        to="/order"
-                        className="bg-[#e3b53b] text-black px-6 py-2 rounded-full font-medium hover:bg-[#d6a930] transition-colors"
+                        to="/login"
+                        className="bg-[#e3b53b] text-black px-4 py-2 rounded-full hover:bg-[#d1a32c] transition-colors"
+                        aria-label="Sign In"
                     >
-                        Order Now
+                        Sign In
                     </RouterLink>
                 </div>
             </nav>

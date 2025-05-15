@@ -9,6 +9,7 @@ import NewsletterPopup from './components/Newsletter';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ContactSection from './components/Contact';
 import { CartProvider } from './context/CartContext';
+import CartPage from './components/OrderNow';
 
 function Home() {
   return (
@@ -32,7 +33,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<ContactSection />} />
-          {/* Optionally add more routes for Privacy, Terms etc */}
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/checkout" element={<div className="pt-24">Checkout Page Placeholder</div>} />
         </Routes>
         <Footer />
       </CartProvider>

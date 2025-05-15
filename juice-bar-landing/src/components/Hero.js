@@ -135,7 +135,7 @@ const Hero = () => {
                             See Menu
                         </ScrollLink>
                         <RouterLink
-                            to="order"
+                            to="cart"
                             spy={true}
                             smooth={true}
                             offset={-80}
