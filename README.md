@@ -58,7 +58,7 @@ A modern, responsive landing page for a fresh juice bar, built with **React.js**
 - **React Icons** – For social media icons and benefit illustrations  
 - **React Hook Form** – Form validation and handling  
 - **CSV Export** – For newsletter email capture and management  
-- **Google Maps API** – For location embedding (optional)
+- **Google Maps API** – For location embedding 
 
 ## 🚀 Installation & Setup
 
