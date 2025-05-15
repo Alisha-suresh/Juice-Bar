@@ -1,0 +1,30 @@
+/* index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-cream text-black font-body;
+}
+
+/* Header example */
+h1,
+h2,
+h3 {
+  @apply font-header font-extrabold;
+}
+
+/* Script accent */
+.accent-script {
+  @apply font-script text-lemon text-xl;
+}
+
+/* Buttons */
+.btn-primary {
+  @apply bg-lemon text-black rounded-full px-6 py-3 font-semibold hover:scale-105 transition-transform duration-300;
+}
+
+/* Card */
+.card {
+  @apply bg-white shadow-lg rounded-lg p-6;
+}
