@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Button } from './ButtonComponent';
+import React, { useState, useEffect } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
-import Header from './Navbar'; // Assuming you have a Navbar component
+import Navbar from './Navbar'; // Assuming you have a Navbar component
 
 const slides = [
     {
@@ -54,7 +53,7 @@ const Hero = () => {
 
     return (
         <>
-            <Header />
+            <Navbar />
 
             <section className="relative pt-20 md:pt-0 h-screen flex flex-col justify-center overflow-hidden text-white">
                 {slides.map((slide, index) => (

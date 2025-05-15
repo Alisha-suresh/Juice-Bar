@@ -1,6 +1,5 @@
-import { Button, CallToAction } from './ButtonComponent';
-import { Link } from 'react-scroll';
-import Header from './Navbar';
+import { CallToAction } from './ButtonComponent';
+
 const BenefitsSection = () => {
     const benefits = [
         {

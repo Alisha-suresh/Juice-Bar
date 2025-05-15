@@ -8,6 +8,7 @@ import BenefitsSection from './components/Benefits';
 import NewsletterPopup from './components/Newsletter';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ContactSection from './components/Contact';
+import { CartProvider } from './context/CartContext';
 
 function Home() {
   return (
@@ -18,7 +19,6 @@ function Home() {
         <BenefitsSection />
         <ReviewsSection />
         <NewsletterPopup />
-        {/* Remove ContactSection from here */}
       </main>
     </>
   );
@@ -27,13 +27,15 @@ function Home() {
 function App() {
   return (
     <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<ContactSection />} />
-        {/* Optionally add more routes for Privacy, Terms etc */}
-      </Routes>
-      <Footer />
+      <CartProvider>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<ContactSection />} />
+          {/* Optionally add more routes for Privacy, Terms etc */}
+        </Routes>
+        <Footer />
+      </CartProvider>
     </Router>
   );
 }
