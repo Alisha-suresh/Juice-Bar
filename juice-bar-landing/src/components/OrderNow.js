@@ -97,7 +97,7 @@ const CartPage = () => {
                                                 <div className="flex-grow sm:ml-6 flex flex-col">
                                                     <div className="flex justify-between mb-2">
                                                         <h3 className="font-bold text-gray-800 text-xl">{item.name}</h3>
-                                                        <p className="font-bold text-gray-800">${(item.price * item.quantity).toFixed(2)}</p>
+                                                        <p className="font-bold text-gray-800">£{(item.price * item.quantity).toFixed(2)}</p>
                                                     </div>
 
                                                     <p className="text-sm text-gray-600 mb-3">{item.description}</p>
@@ -179,7 +179,7 @@ const CartPage = () => {
                                         <div className="space-y-3 mb-6">
                                             <div className="flex justify-between">
                                                 <span className="text-gray-600">Subtotal</span>
-                                                <span className="font-medium">${getCartTotal().toFixed(2)}</span>
+                                                <span className="font-medium">£{getCartTotal().toFixed(2)}</span>
                                             </div>
                                             <div className="flex justify-between">
                                                 <span className="text-gray-600">Shipping</span>
@@ -190,12 +190,12 @@ const CartPage = () => {
                                             </div>
                                             <div className="flex justify-between">
                                                 <span className="text-gray-600">Tax</span>
-                                                <span className="font-medium">${(getCartTotal() * 0.07).toFixed(2)}</span>
+                                                <span className="font-medium">£{(getCartTotal() * 0.07).toFixed(2)}</span>
                                             </div>
                                             <div className="border-t border-dashed border-gray-200 pt-3 mt-3">
                                                 <div className="flex justify-between">
                                                     <span className="font-bold text-lg">Total</span>
-                                                    <span className="font-bold text-lg">${(getCartTotal() * 1.07).toFixed(2)}</span>
+                                                    <span className="font-bold text-lg">£{(getCartTotal() * 1.07).toFixed(2)}</span>
                                                 </div>
                                             </div>
                                         </div>

@@ -29,7 +29,7 @@ const ProductCard = ({ product }) => {
             <div className="relative">
                 <img src={image} alt={title} className="w-full h-64 object-cover" />
                 <div className="absolute top-0 right-0 bg-yellow-400 text-black font-bold py-1 px-4 rounded-bl-lg">
-                    ${price.toFixed(2)}
+                    £{price.toFixed(2)}
                 </div>
 
                 {/* Yellow splash effect */}
@@ -52,7 +52,7 @@ const ProductCard = ({ product }) => {
                         <svg
                             key={i}
                             xmlns="http://www.w3.org/2000/svg"
-                            className={`h-4 w-4 ${i < rating ? 'text-yellow-400' : 'text-gray-300'}`}
+                            className={`h-4 w-4 £{i < rating ? 'text-yellow-400' : 'text-gray-300'}`}
                             viewBox="0 0 20 20"
                             fill="currentColor"
                         >
@@ -78,7 +78,7 @@ const ProductCard = ({ product }) => {
                 {/* Button component with conditional text */}
                 <Button
                     variant="primary"
-                    className={`w-full ${isAdded ? 'bg-green-500 hover:bg-green-600' : ''}`}
+                    className={`w-full £{isAdded ? 'bg-green-500 hover:bg-green-600' : ''}`}
                     icon={
                         isAdded ? (
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
